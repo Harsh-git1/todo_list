@@ -8,37 +8,34 @@
 </head>
 <body>
     
-    <div class="container">
-        <!-- Add Item Section -->
-        <section id="add-item">
-            <!-- Inputs for item name, date, priority -->
-            <input type="text" value="" id = "item-name">
-            <input type = "date" value="" id = "item-date">
-            <select id = "item-priority">
-                <option value="high">high</option>
-                <option value="medium">medium</option>
-                <option value="low">low</option>
+    <section id="add-item">
+        <h2>Add Item</h2>
+        <form id="add-form">
+            <input type="text" id="item-name" placeholder="Item Name" required>
+            <input type="date" id="item-date" required>
+            <select id="item-priority" required>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
             </select>
-            <input type = "button" value = "submit">
-
-            <!-- Button to add item -->
-        </section>
-        
-        <!-- Today's Tasks Section -->
-        <section id="todays-tasks">
-            <!-- Display today's tasks -->
-        </section>
-        
-        <!-- Future Tasks Section -->
-        <section id="future-tasks">
-            <!-- Display future tasks -->
-        </section>
-        
-        <!-- Completed Tasks Section -->
-        <section id="completed-tasks">
-            <!-- Display completed tasks -->
-        </section>
-    </div>
+            <button type="submit">Add Item</button>
+        </form>
+    </section>
+    
+    <section id="todays-tasks">
+        <h2>Today's Tasks</h2>
+        <div id="today-list"></div>
+    </section>
+    
+    <section id="future-tasks">
+        <h2>Future Tasks</h2>
+        <div id="future-list"></div>
+    </section>
+    
+    <section id="completed-tasks">
+        <h2>Completed Tasks</h2>
+        <div id="completed-list"></div>
+    </section>
     <script  src = "script.js"></script>
 </body>
 </html>
